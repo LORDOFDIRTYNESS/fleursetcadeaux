@@ -26,7 +26,7 @@ const t = {
           <p class="font-['Anton'] text-[13px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].right }}</p>
         </div>
         <p class="font-['Anton'] text-[112px] leading-[0.92] uppercase text-[#fffdf7]">
-          Fleurs &amp;<br>Cadeaux
+          Fleurs&nbsp;&amp;<br>Cadeaux
         </p>
       </div>
     </div>

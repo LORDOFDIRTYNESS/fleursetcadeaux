@@ -49,7 +49,7 @@ const times = Array(7).fill('17:00 - 22:30')
           <div class="flex flex-col gap-[2px]">
             <span v-for="(day, i) in days[lang]" :key="i">{{ day }}</span>
           </div>
-          <div class="flex flex-col gap-[2px] ml-auto pr-3 md:pr-0">
+          <div class="flex flex-col gap-[2px] ml-auto">
             <span v-for="(time, i) in times" :key="i">{{ time }}</span>
           </div>
         </div>

@@ -77,7 +77,7 @@ onBeforeUnmount(() => {
               :href="link.href"
               :target="link.external ? '_blank' : undefined"
               :rel="link.external ? 'noopener noreferrer' : undefined"
-              class="block rounded-md px-3 py-3 text-center font-inter text-[16px] font-medium tracking-[-0.2px] text-[#ea0050] hover:bg-[#ea0050]/5"
+              class="block rounded-md px-3 py-3 text-center font-inter text-[16px] font-medium uppercase tracking-[0.02em] text-[#ea0050] hover:bg-[#ea0050]/5"
               @click="isOpen = false"
             >
               {{ link.label }}

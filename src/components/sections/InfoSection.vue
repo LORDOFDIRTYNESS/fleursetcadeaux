@@ -19,7 +19,7 @@ const times = Array(7).fill('17:00 - 22:30')
     <div class="flex gap-4">
       <img :src="infoCardUrl" alt="" class="w-[45%] object-cover" />
 
-      <div class="flex flex-1 flex-col gap-6 font-inter text-[12px] font-medium leading-[1.2] tracking-[-0.3px] text-[#fffdf7]">
+      <div class="flex flex-1 flex-col gap-6 font-inter text-[14px] font-medium leading-[1.2] tracking-[-0.3px] text-[#fffdf7]">
         <div class="flex justify-between">
           <div class="flex flex-col gap-[2px]">
             <span v-for="(day, i) in days[lang]" :key="i">{{ day }}</span>
@@ -29,7 +29,7 @@ const times = Array(7).fill('17:00 - 22:30')
           </div>
         </div>
 
-        <div class="font-inter text-[12px] font-medium leading-[1.4] tracking-[-0.3px] text-[#fffdf7]">
+        <div class="font-inter text-[14px] font-medium leading-[1.4] tracking-[-0.3px] text-[#fffdf7]">
           <a
             href="https://maps.google.com/?q=1002+Rue+Saint-Urbain,+Montréal,+H2Z+1K6"
             target="_blank"

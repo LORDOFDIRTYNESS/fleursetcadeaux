@@ -22,8 +22,8 @@ const t = {
     <div class="absolute inset-x-0 bottom-[-103px] flex justify-center">
       <div class="w-fit px-4">
         <div class="flex items-end justify-between pb-1">
-          <p class="font-['Anton'] text-[13px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].left }}</p>
-          <p class="font-['Anton'] text-[13px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].right }}</p>
+          <p class="font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].left }}</p>
+          <p class="font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].right }}</p>
         </div>
         <p class="font-['Anton'] text-[112px] leading-[0.92] uppercase text-[#fffdf7]">
           Fleurs&nbsp;&amp;<br>Cadeaux

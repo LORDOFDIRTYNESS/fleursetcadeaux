@@ -49,7 +49,7 @@ onBeforeUnmount(() => {
             href="https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat"
             target="_blank"
             rel="noopener noreferrer"
-            class="hidden md:block rounded-md bg-[#ea0050] px-4 py-1.5 font-inter text-[12px] font-semibold uppercase tracking-[0.04em] text-[#fffdf7] hover:opacity-80 transition-opacity"
+            class="hidden md:block rounded-md bg-[#ea0050] px-5 py-2 font-inter text-[13px] font-semibold uppercase tracking-[0.04em] text-[#fffdf7] hover:opacity-80 transition-opacity md:mr-6"
           >
             {{ lang === 'fr' ? 'Réservation' : 'Reservation' }}
           </a>

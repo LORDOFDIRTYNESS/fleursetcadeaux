@@ -21,7 +21,7 @@ const t = {
 
     <div class="absolute inset-x-0 bottom-[-103px] flex justify-center">
       <div class="w-fit px-4">
-        <div class="flex items-end justify-between pb-1">
+        <div class="flex items-end justify-between pb-1 ml-[3px]">
           <p class="font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].left }}</p>
           <p class="font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].right }}</p>
         </div>

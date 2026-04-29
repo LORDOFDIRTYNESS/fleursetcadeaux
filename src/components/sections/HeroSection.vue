@@ -20,7 +20,7 @@ const t = {
     />
     <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/75" />
 
-    <div class="absolute inset-x-0 bottom-[-103px] flex justify-center md:bottom-[-85px] lg:bottom-[-115px] xl:bottom-[-147px] md:justify-start md:left-10 lg:left-14 xl:left-16 md:inset-x-auto">
+    <div class="absolute inset-x-0 bottom-[-103px] flex justify-center md:bottom-[-85px] lg:bottom-[-115px] xl:bottom-[-147px] md:justify-start md:left-10 lg:left-24 xl:left-36 md:inset-x-auto">
       <div class="w-fit px-4 md:px-0">
         <div class="flex items-end justify-between pb-1 ml-[3px]">
           <p class="slide-up anim-delay-3 font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].left }}</p>
@@ -45,7 +45,7 @@ const t = {
   height: calc(75svh - 74px);
 }
 @media (min-width: 768px) {
-  .hero { height: 85vh; }
+  .hero { height: 80vh; }
 }
 
 .slide-up {

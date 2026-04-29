@@ -64,8 +64,8 @@ const times = Array(7).fill('17:00 - 22:30')
             <div>1002 Rue Saint-Urbain</div>
             <div>Montréal, H2Z 1K6</div>
           </a>
-          <a href="tel:+15148664411" class="mt-2 block underline">+1 514-866-4411</a>
-          <a href="mailto:info@fleursetcadeaux.com" class="mt-1 block underline text-[10px] md:text-[13px] lg:text-[14px] xl:text-[16px]">info@fleursetcadeaux.com</a>
+          <a href="tel:+15148664411" class="mt-2 block underline text-[12px] md:text-[13px] lg:text-[14px] xl:text-[16px]">+1 514-866-4411</a>
+          <a href="mailto:info@fleursetcadeaux.com" class="mt-1 block underline text-[12px] md:text-[13px] lg:text-[14px] xl:text-[16px]">info@fleursetcadeaux.com</a>
         </div>
       </div>
     </div>

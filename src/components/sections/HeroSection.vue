@@ -26,7 +26,7 @@ const t = {
           <p class="slide-up anim-delay-3 font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].left }}</p>
           <p class="slide-up anim-delay-4 font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].right }}</p>
         </div>
-        <div class="font-['Anton'] text-[112px] leading-[0.92] uppercase text-[#fffdf7] md:text-[92px] lg:text-[125px] xl:text-[160px]">
+        <div class="font-['Anton'] text-[110px] leading-[0.92] uppercase text-[#fffdf7] md:text-[92px] lg:text-[125px] xl:text-[160px]">
           <div class="slide-up anim-delay-1">Fleurs&nbsp;&amp;</div>
           <div class="slide-up anim-delay-2">Cadeaux</div>
         </div>

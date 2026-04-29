@@ -22,7 +22,7 @@ import FooterSection from './sections/FooterSection.vue'
       <div class="md:hidden">
         <FoodSection />
       </div>
-      <div class="md:mx-10 lg:mx-16 xl:mx-20 md:rounded-xl md:overflow-hidden">
+      <div class="md:mx-10 lg:mx-24 xl:mx-36 md:rounded-xl md:overflow-hidden">
         <div class="md:flex md:items-stretch">
           <div class="md:w-1/2 md:flex md:flex-col">
             <MenusSection />

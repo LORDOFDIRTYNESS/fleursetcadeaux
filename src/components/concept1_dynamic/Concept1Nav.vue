@@ -97,16 +97,16 @@ onBeforeUnmount(() => {
             </a>
 
             <div class="mt-3 flex items-center justify-between border-t border-black/10 pt-3 px-1">
-              <div class="flex items-center gap-3">
+              <div class="flex items-center gap-1">
                 <a
                   href="https://www.facebook.com/fleurs.cadeaux/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  class="text-[#ea0050] hover:opacity-70 transition-opacity"
+                  class="p-2 text-[#ea0050] hover:opacity-70 transition-opacity"
                   @click="isOpen = false"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                   </svg>
                 </a>
@@ -115,10 +115,10 @@ onBeforeUnmount(() => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  class="text-[#ea0050] hover:opacity-70 transition-opacity"
+                  class="p-2 text-[#ea0050] hover:opacity-70 transition-opacity"
                   @click="isOpen = false"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                     <circle cx="12" cy="12" r="4"/>
                     <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
@@ -127,7 +127,7 @@ onBeforeUnmount(() => {
               </div>
               <button
                 @click="toggle"
-                class="font-inter text-[13px] font-semibold tracking-[0.05em] text-[#ea0050] hover:opacity-70 transition-opacity"
+                class="p-2 font-inter text-[13px] md:text-[15px] font-semibold tracking-[0.05em] text-[#ea0050] hover:opacity-70 transition-opacity"
               >
                 {{ lang === 'fr' ? 'EN' : 'FR' }}
               </button>

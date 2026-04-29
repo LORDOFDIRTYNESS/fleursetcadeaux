@@ -12,7 +12,7 @@ onMounted(() => {
       sectionRef.value?.classList.add('in-view')
       observer.disconnect()
     }
-  }, { threshold: 0.15 })
+  }, { threshold: 0.4 })
   if (sectionRef.value) observer.observe(sectionRef.value)
 })
 

@@ -54,10 +54,10 @@ const t = {
   animation: slideIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.anim-delay-1 { animation-delay: 0.4s; }
-.anim-delay-2 { animation-delay: 0.65s; }
-.anim-delay-3 { animation-delay: 1s; }
-.anim-delay-4 { animation-delay: 1.2s; }
+.anim-delay-1 { animation-delay: 2.4s; }
+.anim-delay-2 { animation-delay: 2.65s; }
+.anim-delay-3 { animation-delay: 3s; }
+.anim-delay-4 { animation-delay: 3.2s; }
 
 @keyframes slideIn {
   to {

@@ -1,5 +1,18 @@
 <script setup>
+import { onMounted, ref } from 'vue'
 import { useLanguage } from '../../composables/useLanguage'
+
+const buttonsRef = ref(null)
+
+onMounted(() => {
+  const observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      buttonsRef.value?.classList.add('in-view')
+      observer.disconnect()
+    }
+  }, { threshold: 0.2 })
+  if (buttonsRef.value) observer.observe(buttonsRef.value)
+})
 
 const { lang } = useLanguage()
 
@@ -31,12 +44,12 @@ const t = {
     <!-- Mobile layout -->
     <div class="md:hidden px-5 py-8">
       <hr class="mb-8 border-t border-[#fffdf7]/70" />
-      <div class="flex flex-col gap-3 px-8">
+      <div ref="buttonsRef" class="flex flex-col gap-3 px-8">
         <a
           href="https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat"
           target="_blank"
           rel="noopener noreferrer"
-          class="block w-full rounded-2xl bg-[#fffdf7] py-4 text-center font-inter text-[15px] font-semibold tracking-[-0.2px] text-black"
+          class="slide-in delay-1 block w-full rounded-2xl bg-[#fffdf7] py-4 text-center font-inter text-[15px] font-semibold tracking-[-0.2px] text-black"
         >
           {{ t[lang].reserve }}
         </a>
@@ -44,7 +57,7 @@ const t = {
           href="https://www.dropbox.com/scl/fi/79re4tr4ietf92ucw635v/FC-MENU.pdf?rlkey=ufu78k4dil7lr8i1eocpdcqsc&e=1&dl=0"
           target="_blank"
           rel="noopener noreferrer"
-          class="block w-full rounded-2xl bg-[#fffdf7] py-4 text-center font-inter text-[15px] font-semibold tracking-[-0.2px] text-black"
+          class="slide-in delay-2 block w-full rounded-2xl bg-[#fffdf7] py-4 text-center font-inter text-[15px] font-semibold tracking-[-0.2px] text-black"
         >
           MENU
         </a>
@@ -52,7 +65,7 @@ const t = {
           href="https://www.dropbox.com/scl/fi/dsl0553bgacol1v6u0r43/FC-VIN-SAKE.pdf?rlkey=bx7vivdzle505azpss32od9qo&e=1&dl=0"
           target="_blank"
           rel="noopener noreferrer"
-          class="block w-full rounded-2xl bg-[#fffdf7] py-4 text-center font-inter text-[15px] font-semibold tracking-[-0.2px] text-black"
+          class="slide-in delay-3 block w-full rounded-2xl bg-[#fffdf7] py-4 text-center font-inter text-[15px] font-semibold tracking-[-0.2px] text-black"
         >
           {{ t[lang].sake }}
         </a>
@@ -93,3 +106,25 @@ const t = {
 
   </section>
 </template>
+
+<style scoped>
+.slide-in {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.in-view .slide-in {
+  animation: slideIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.in-view .delay-1 { animation-delay: 0.1s; }
+.in-view .delay-2 { animation-delay: 0.3s; }
+.in-view .delay-3 { animation-delay: 0.5s; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+</style>

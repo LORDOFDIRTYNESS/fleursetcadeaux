@@ -23,12 +23,13 @@ const t = {
     <div class="absolute inset-x-0 bottom-[-103px] flex justify-center md:bottom-[-85px] lg:bottom-[-115px] xl:bottom-[-147px] md:justify-start md:left-10 lg:left-14 xl:left-16 md:inset-x-auto">
       <div class="w-fit px-4 md:px-0">
         <div class="flex items-end justify-between pb-1 ml-[3px]">
-          <p class="font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].left }}</p>
-          <p class="font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].right }}</p>
+          <p class="slide-up anim-delay-3 font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].left }}</p>
+          <p class="slide-up anim-delay-4 font-['Anton'] text-[18px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].right }}</p>
         </div>
-        <p class="font-['Anton'] text-[112px] leading-[0.92] uppercase text-[#fffdf7] md:text-[92px] lg:text-[125px] xl:text-[160px]">
-          Fleurs&nbsp;&amp;<br>Cadeaux
-        </p>
+        <div class="font-['Anton'] text-[112px] leading-[0.92] uppercase text-[#fffdf7] md:text-[92px] lg:text-[125px] xl:text-[160px]">
+          <div class="slide-up anim-delay-1">Fleurs&nbsp;&amp;</div>
+          <div class="slide-up anim-delay-2">Cadeaux</div>
+        </div>
       </div>
     </div>
 
@@ -45,5 +46,23 @@ const t = {
 }
 @media (min-width: 768px) {
   .hero { height: 85vh; }
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-delay-1 { animation-delay: 0.4s; }
+.anim-delay-2 { animation-delay: 0.65s; }
+.anim-delay-3 { animation-delay: 1s; }
+.anim-delay-4 { animation-delay: 1.2s; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>

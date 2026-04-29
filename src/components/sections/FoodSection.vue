@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
-import foodGifUrl from '../../assets/concept1/food-bg.gif'
+import foodGifUrl from '../../assets/concept1/food-bg.webm'
 import stickerUrl from '../../assets/concept1/sticker.png'
 
 const sectionRef = ref(null)
@@ -34,7 +34,7 @@ onBeforeUnmount(() => {
 
 <template>
   <section ref="sectionRef" class="relative z-10">
-    <img :src="foodGifUrl" alt="" class="w-full" />
+    <video :src="foodGifUrl" class="w-full" autoplay loop muted playsinline />
 
     <div
       class="absolute top-[-55px] left-0 will-change-transform"

@@ -6,7 +6,11 @@
       "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 \"src/assets/concept1/db412a25-2a77-41d6-a3fc-d4d3100c05bd.gif\")",
       "Bash(ffmpeg -i \"src/assets/concept1/db412a25-2a77-41d6-a3fc-d4d3100c05bd.gif\" -vf \"negate,cropdetect=limit=32:round=2:skip=0\" -f null -)",
       "Bash(ffmpeg -i \"src/assets/concept1/db412a25-2a77-41d6-a3fc-d4d3100c05bd.gif\" -vf \"crop=1920:2398:720:0\" \"src/assets/concept1/food-bg.gif\")",
-      "Bash(ffmpeg -y -i \"src/assets/concept1/db412a25-2a77-41d6-a3fc-d4d3100c05bd.gif\" -vf \"crop=1900:2398:730:0\" \"src/assets/concept1/food-bg.gif\")"
+      "Bash(ffmpeg -y -i \"src/assets/concept1/db412a25-2a77-41d6-a3fc-d4d3100c05bd.gif\" -vf \"crop=1900:2398:730:0\" \"src/assets/concept1/food-bg.gif\")",
+      "Bash(sudo apt *)",
+      "Bash(ffmpeg -i food-bg.gif -c:v libvpx-vp9 -b:v 0 -crf 33 -an -loop 0 food-bg.webm -y)",
+      "Bash(ffmpeg -i db412a25-2a77-41d6-a3fc-d4d3100c05bd.gif -c:v libvpx-vp9 -b:v 0 -crf 33 -an -loop 0 db412a25-2a77-41d6-a3fc-d4d3100c05bd.webm -y)",
+      "Bash(npm run *)"
     ]
   }
 }

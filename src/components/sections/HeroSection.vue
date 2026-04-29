@@ -1,6 +1,6 @@
 <script setup>
 import headerBgUrl from '../../assets/concept1/header-bg.webp'
-import foodGifUrl from '../../assets/concept1/food-bg.gif'
+import foodGifUrl from '../../assets/concept1/food-bg.webm'
 import { useLanguage } from '../../composables/useLanguage'
 
 const { lang } = useLanguage()
@@ -35,7 +35,7 @@ const t = {
 
     <!-- Desktop food image overlay -->
     <div class="hidden md:block absolute right-0 md:bottom-[-160px] lg:bottom-[-190px] xl:bottom-[-220px] md:w-[42%] lg:w-[40%] xl:w-[38%] z-20 shadow-2xl pr-8">
-      <img :src="foodGifUrl" alt="" class="w-full object-cover" />
+      <video :src="foodGifUrl" class="w-full object-cover" autoplay loop muted playsinline />
     </div>
   </section>
 </template>

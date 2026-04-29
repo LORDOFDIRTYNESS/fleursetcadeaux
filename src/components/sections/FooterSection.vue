@@ -1,12 +1,13 @@
 <script setup>
-import { ref } from 'vue'
+import { useLanguage } from '../../composables/useLanguage'
 
-const email = ref('')
-const FORM_ENTRY_ID = 'REPLACE_WITH_ENTRY_ID'
+const { lang } = useLanguage()
 
-const submit = () => {
-  const url = `https://docs.google.com/forms/d/1B-aBUEJCcuVdN32LN58HS3LWjd6jTLwccVvVqsaQ450/viewform?${FORM_ENTRY_ID}=${encodeURIComponent(email.value)}`
-  window.open(url, '_blank')
+const FORM_URL = 'https://docs.google.com/forms/d/1B-aBUEJCcuVdN32LN58HS3LWjd6jTLwccVvVqsaQ450/viewform'
+
+const t = {
+  fr: { label: 'Infolettre', button: "S'inscrire" },
+  en: { label: 'Newsletter', button: 'Subscribe' },
 }
 </script>
 
@@ -16,36 +17,18 @@ const submit = () => {
 
       <!-- Infolettre -->
       <div class="flex flex-col gap-2">
-        <span class="font-inter text-[11px] font-medium uppercase tracking-[0.08em] text-[#fffdf7]/70">Infolettre</span>
-        <form @submit.prevent="submit" class="flex w-fit items-center overflow-hidden rounded-md border border-[#fffdf7]/40">
-          <input
-            v-model="email"
-            type="email"
-            placeholder="Votre adresse courriel"
-            required
-            class="bg-transparent px-4 py-2 font-inter text-[13px] text-[#fffdf7] placeholder-[#fffdf7]/50 outline-none w-[180px]"
-          />
-          <button type="submit" class="pr-3 text-[#fffdf7] hover:opacity-70 transition-opacity">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </form>
-      </div>
-
-      <!-- Address & contact -->
-      <div class="font-inter text-[12px] font-medium leading-[1.4] tracking-[-0.3px] text-[#fffdf7]">
+        <span class="font-inter text-[11px] font-medium uppercase tracking-[0.08em] text-[#fffdf7]/70">{{ t[lang].label }}</span>
         <a
-          href="https://maps.google.com/?q=1002+Rue+Saint-Urbain,+Montréal,+H2Z+1K6"
+          :href="FORM_URL"
           target="_blank"
           rel="noopener noreferrer"
-          class="underline"
+          class="flex w-fit items-center gap-2 overflow-hidden rounded-md border border-[#fffdf7]/40 px-4 py-2 font-inter text-[13px] text-[#fffdf7] hover:opacity-70 transition-opacity"
         >
-          <div>1002 Rue Saint-Urbain</div>
-          <div>Montréal, H2Z 1K6</div>
+          {{ t[lang].button }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
         </a>
-        <a href="tel:+15148664411" class="mt-2 block underline">+1 514-866-4411</a>
-        <a href="mailto:info@fleursetcadeaux.com" class="mt-1 block underline">info@fleursetcadeaux.com</a>
       </div>
 
       <!-- Social links -->

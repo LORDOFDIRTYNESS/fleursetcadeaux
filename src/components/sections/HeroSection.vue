@@ -1,5 +1,13 @@
 <script setup>
 import headerBgUrl from '../../assets/concept1/header-bg.webp'
+import { useLanguage } from '../../composables/useLanguage'
+
+const { lang } = useLanguage()
+
+const t = {
+  fr: { left: 'Cuisine Japonaise', right: 'Bar à Saké + Vin' },
+  en: { left: 'Japanese Cuisine', right: 'Saké + Wine Bar' },
+}
 </script>
 
 <template>
@@ -14,8 +22,8 @@ import headerBgUrl from '../../assets/concept1/header-bg.webp'
     <div class="absolute inset-x-0 bottom-[-103px] flex justify-center">
       <div class="w-fit px-4">
         <div class="flex items-end justify-between pb-1">
-          <p class="font-['Anton'] text-[13px] uppercase tracking-[0.04em] text-[#fffdf7]">Cuisine Japonaise</p>
-          <p class="font-['Anton'] text-[13px] uppercase tracking-[0.04em] text-[#fffdf7]">Bar à Saké + Vin</p>
+          <p class="font-['Anton'] text-[13px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].left }}</p>
+          <p class="font-['Anton'] text-[13px] uppercase tracking-[0.04em] text-[#fffdf7]">{{ t[lang].right }}</p>
         </div>
         <p class="font-['Anton'] text-[112px] leading-[0.92] uppercase text-[#fffdf7]">
           Fleurs &amp;<br>Cadeaux

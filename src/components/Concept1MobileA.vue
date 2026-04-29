@@ -9,7 +9,7 @@ import FooterSection from './sections/FooterSection.vue'
 </script>
 
 <template>
-  <div class="min-h-dvh bg-[#f4f4f4]">
+  <div class="min-h-dvh overflow-x-hidden bg-[#260000]">
     <Concept1Nav />
     <main>
       <HeroSection />

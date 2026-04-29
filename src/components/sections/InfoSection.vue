@@ -5,6 +5,11 @@ import { useLanguage } from '../../composables/useLanguage'
 
 const { lang } = useLanguage()
 
+const t = {
+  fr: 'Nos heures d\'ouverture',
+  en: 'Opening hours',
+}
+
 const days = {
   fr: ['L', 'M', 'M', 'J', 'V', 'S', 'D'],
   en: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
@@ -13,13 +18,20 @@ const times = Array(7).fill('17:00 - 22:30')
 </script>
 
 <template>
-  <section class="bg-[#260000] px-5 py-6">
+  <section class="bg-[#260000] px-5 py-6 md:px-8 md:py-10 lg:px-12 lg:py-14 xl:px-16 xl:py-16">
     <img :src="infoImageUrl" alt="" class="w-full object-cover mb-6 pl-14" />
 
-    <div class="flex gap-4">
-      <img :src="infoCardUrl" alt="" class="w-[45%] object-cover" />
+    <div class="flex gap-4 md:gap-6 lg:gap-10 xl:gap-16">
+      <img
+        :src="infoCardUrl"
+        alt=""
+        class="w-[45%] object-cover md:w-[42%] md:max-w-[280px] lg:max-w-[330px] xl:max-w-[380px] md:h-full"
+      />
 
-      <div class="flex flex-1 flex-col gap-6 font-inter text-[14px] font-medium leading-[1.2] tracking-[-0.3px] text-[#fffdf7]">
+      <div class="flex flex-1 flex-col gap-6 font-inter font-medium leading-[1.2] tracking-[-0.3px] text-[#fffdf7] md:text-[13px] md:gap-6 lg:text-[14px] lg:gap-8 xl:text-[16px] xl:gap-10">
+        <span class="block text-center font-inter font-semibold uppercase tracking-[0.08em] text-[#fffdf7] md:text-[13px] lg:text-[14px] xl:text-[15px]">{{ t[lang] }}</span>
+        <hr class="-mt-5 mx-auto w-3/4 border-t border-[#fffdf7]" />
+
         <div class="flex justify-between">
           <div class="flex flex-col gap-[2px]">
             <span v-for="(day, i) in days[lang]" :key="i">{{ day }}</span>
@@ -29,7 +41,7 @@ const times = Array(7).fill('17:00 - 22:30')
           </div>
         </div>
 
-        <div class="font-inter text-[14px] font-medium leading-[1.4] tracking-[-0.3px] text-[#fffdf7]">
+        <div class="font-inter font-medium leading-[1.4] tracking-[-0.3px] text-[#fffdf7] md:text-[13px] lg:text-[14px] xl:text-[16px]">
           <a
             href="https://maps.google.com/?q=1002+Rue+Saint-Urbain,+Montréal,+H2Z+1K6"
             target="_blank"

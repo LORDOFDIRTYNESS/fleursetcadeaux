@@ -5,6 +5,8 @@ import AboutSection from './sections/AboutSection.vue'
 import FoodSection from './sections/FoodSection.vue'
 import MenusSection from './sections/MenusSection.vue'
 import InfoSection from './sections/InfoSection.vue'
+import BannerSection from './sections/BannerSection.vue'
+import InfolettreSection from './sections/InfolettreSection.vue'
 import FooterSection from './sections/FooterSection.vue'
 </script>
 
@@ -14,10 +16,27 @@ import FooterSection from './sections/FooterSection.vue'
     <main>
       <HeroSection />
       <AboutSection />
-      <FoodSection />
-      <MenusSection />
-      <InfoSection />
-      <FooterSection />
+      <div class="hidden md:block">
+        <BannerSection />
+      </div>
+      <div class="md:hidden">
+        <FoodSection />
+      </div>
+      <div class="md:mx-10 lg:mx-16 xl:mx-20 md:rounded-xl md:overflow-hidden">
+        <div class="md:flex md:items-stretch">
+          <div class="md:w-1/2 md:flex md:flex-col">
+            <MenusSection />
+            <div class="md:hidden">
+              <BannerSection />
+            </div>
+            <InfolettreSection />
+          </div>
+          <div class="md:w-1/2">
+            <InfoSection />
+          </div>
+        </div>
+        <FooterSection />
+      </div>
     </main>
   </div>
 </template>

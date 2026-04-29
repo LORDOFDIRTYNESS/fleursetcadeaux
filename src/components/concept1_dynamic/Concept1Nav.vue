@@ -8,13 +8,13 @@ const { lang, toggle } = useLanguage()
 
 const links = {
   fr: [
-    { label: 'Réserver une table', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true },
+    { label: 'Réserver une table', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true, mobileOnly: true },
     { label: 'Menu', href: 'https://www.dropbox.com/scl/fi/79re4tr4ietf92ucw635v/FC-MENU.pdf?rlkey=ufu78k4dil7lr8i1eocpdcqsc&e=1&dl=0', external: true },
     { label: 'Saké & Vin', href: 'https://www.dropbox.com/scl/fi/dsl0553bgacol1v6u0r43/FC-VIN-SAKE.pdf?rlkey=bx7vivdzle505azpss32od9qo&e=1&dl=0', external: true },
     { label: 'Boutique', href: 'https://fleurs-et-cadeaux.square.site/', external: true },
   ],
   en: [
-    { label: 'Book a table', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true },
+    { label: 'Book a table', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true, mobileOnly: true },
     { label: 'Menu', href: 'https://www.dropbox.com/scl/fi/79re4tr4ietf92ucw635v/FC-MENU.pdf?rlkey=ufu78k4dil7lr8i1eocpdcqsc&e=1&dl=0', external: true },
     { label: 'Saké & Wine', href: 'https://www.dropbox.com/scl/fi/dsl0553bgacol1v6u0r43/FC-VIN-SAKE.pdf?rlkey=bx7vivdzle505azpss32od9qo&e=1&dl=0', external: true },
     { label: 'Shop', href: 'https://fleurs-et-cadeaux.square.site/', external: true },
@@ -43,26 +43,38 @@ onBeforeUnmount(() => {
             </div>
           </div>
 
-        <button
-          type="button"
-          :aria-expanded="isOpen"
-          aria-label="Menu"
-          class="relative grid h-14 w-14 place-items-center rounded-md hover:bg-black/5"
-          @click="isOpen = !isOpen"
-        >
-          <span
-            class="absolute h-[2px] w-8 rounded bg-brand-red transition-transform duration-200"
-            :class="isOpen ? 'translate-y-0 rotate-45' : '-translate-y-3'"
-          />
-          <span
-            class="absolute h-[2px] w-8 rounded bg-brand-red transition-opacity duration-200"
-            :class="isOpen ? 'opacity-0' : 'opacity-100'"
-          />
-          <span
-            class="absolute h-[2px] w-8 rounded bg-brand-red transition-transform duration-200"
-            :class="isOpen ? 'translate-y-0 -rotate-45' : 'translate-y-3'"
-          />
-        </button>
+          <div class="flex items-center gap-1">
+          <!-- Desktop reservation button -->
+          <a
+            href="https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden md:block rounded-md bg-[#ea0050] px-4 py-1.5 font-inter text-[12px] font-semibold uppercase tracking-[0.04em] text-[#fffdf7] hover:opacity-80 transition-opacity"
+          >
+            {{ lang === 'fr' ? 'Réservation' : 'Reservation' }}
+          </a>
+
+          <button
+            type="button"
+            :aria-expanded="isOpen"
+            aria-label="Menu"
+            class="relative grid h-14 w-14 place-items-center rounded-md hover:bg-black/5"
+            @click="isOpen = !isOpen"
+          >
+            <span
+              class="absolute h-[2px] w-8 rounded bg-brand-red transition-transform duration-200"
+              :class="isOpen ? 'translate-y-0 rotate-45' : '-translate-y-3'"
+            />
+            <span
+              class="absolute h-[2px] w-8 rounded bg-brand-red transition-opacity duration-200"
+              :class="isOpen ? 'opacity-0' : 'opacity-100'"
+            />
+            <span
+              class="absolute h-[2px] w-8 rounded bg-brand-red transition-transform duration-200"
+              :class="isOpen ? 'translate-y-0 -rotate-45' : 'translate-y-3'"
+            />
+          </button>
+          </div>
         </div>
 
         <nav
@@ -77,6 +89,7 @@ onBeforeUnmount(() => {
               :href="link.href"
               :target="link.external ? '_blank' : undefined"
               :rel="link.external ? 'noopener noreferrer' : undefined"
+              :class="link.mobileOnly ? 'md:hidden' : ''"
               class="block rounded-md px-3 py-3 text-center font-inter text-[16px] font-semibold uppercase tracking-[0.02em] text-[#ea0050] hover:bg-[#ea0050]/5"
               @click="isOpen = false"
             >

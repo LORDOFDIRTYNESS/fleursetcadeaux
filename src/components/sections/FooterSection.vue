@@ -12,11 +12,11 @@ const t = {
 </script>
 
 <template>
-  <footer class="bg-[#260000] px-5 py-8">
-    <div class="flex flex-col gap-6">
+  <footer class="bg-[#260000] px-5 py-8 md:px-16 md:py-12">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center">
 
-      <!-- Infolettre -->
-      <div class="flex flex-col gap-2">
+      <!-- Infolettre (mobile only) -->
+      <div class="flex flex-col gap-2 md:hidden">
         <span class="font-inter text-[11px] font-medium uppercase tracking-[0.08em] text-[#fffdf7]/70">{{ t[lang].label }}</span>
         <a
           :href="FORM_URL"
@@ -31,8 +31,11 @@ const t = {
         </a>
       </div>
 
+      <!-- Left spacer (desktop only) -->
+      <div class="hidden md:block md:flex-1"></div>
+
       <!-- Social links -->
-      <div class="flex justify-center gap-4">
+      <div class="flex justify-center gap-4 md:flex-1 md:justify-center">
         <a
           href="https://www.facebook.com/fleurs.cadeaux/"
           target="_blank"
@@ -40,7 +43,7 @@ const t = {
           aria-label="Facebook"
           class="text-[#fffdf7] hover:opacity-70 transition-opacity"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-[26px] h-[26px] md:w-[38px] md:h-[38px]">
             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
           </svg>
         </a>
@@ -51,13 +54,16 @@ const t = {
           aria-label="Instagram"
           class="text-[#fffdf7] hover:opacity-70 transition-opacity"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-[26px] h-[26px] md:w-[38px] md:h-[38px]">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
             <circle cx="12" cy="12" r="4"/>
             <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
           </svg>
         </a>
       </div>
+
+      <!-- Spacer to balance infolettre on the left -->
+      <div class="hidden md:block md:flex-1"></div>
 
     </div>
   </footer>

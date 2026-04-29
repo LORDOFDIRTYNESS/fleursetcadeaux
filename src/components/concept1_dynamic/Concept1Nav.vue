@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeUnmount, ref, watch } from 'vue'
-import logoUrl from '../../assets/concept1/logo.png'
+import logoUrl from '../../assets/concept1/flowers.png'
 import { useLanguage } from '../../composables/useLanguage'
 
 const isOpen = ref(false)
@@ -37,10 +37,8 @@ onBeforeUnmount(() => {
     <div class="relative z-10 mx-auto w-full max-w-[1100px] px-3 pt-3">
       <div class="overflow-hidden rounded-md bg-[#fffdf7] shadow-sm">
         <div class="flex items-center justify-between px-4 py-1">
-          <div class="h-10 w-10 shrink-0">
-            <div class="relative h-full w-full overflow-hidden">
-              <img :src="logoUrl" alt="Fleurs et Cadeaux" class="absolute left-[-587.72%] top-0 h-full w-[1275.75%] max-w-none" />
-            </div>
+          <div class="h-[50px] w-[50px] md:h-[60px] md:w-[60px] shrink-0">
+            <img :src="logoUrl" alt="Fleurs et Cadeaux" class="h-full w-full object-contain" />
           </div>
 
           <div class="flex items-center gap-1">

@@ -1,11 +1,11 @@
 <script setup>
 import Concept1Nav from './concept1_dynamic/Concept1Nav.vue'
-import AboutSection from './concept1_dynamic/AboutSection.vue'
-import DividerBar from './concept1_dynamic/DividerBar.vue'
-import FoodSection from './concept1_dynamic/FoodSection.vue'
-import HeroSection from './concept1_dynamic/HeroSection.vue'
-import InfoSection from './concept1_dynamic/InfoSection.vue'
-import MenusSection from './concept1_dynamic/MenusSection.vue'
+import HeroSection from './sections/HeroSection.vue'
+import AboutSection from './sections/AboutSection.vue'
+import FoodSection from './sections/FoodSection.vue'
+import MenusSection from './sections/MenusSection.vue'
+import InfoSection from './sections/InfoSection.vue'
+import FooterSection from './sections/FooterSection.vue'
 </script>
 
 <template>
@@ -16,8 +16,8 @@ import MenusSection from './concept1_dynamic/MenusSection.vue'
       <AboutSection />
       <FoodSection />
       <MenusSection />
-      <DividerBar />
       <InfoSection />
+      <FooterSection />
     </main>
   </div>
 </template>

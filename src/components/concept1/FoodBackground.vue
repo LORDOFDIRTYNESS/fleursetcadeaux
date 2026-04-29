@@ -1,5 +1,5 @@
 <script setup>
-import sectionFoodBgUrl from '../../assets/concept1/section-food-bg.webp'
+import sectionFoodBgUrl from '../../assets/concept1/db412a25-2a77-41d6-a3fc-d4d3100c05bd.gif'
 </script>
 
 <template>

@@ -5,10 +5,10 @@ import logoUrl from '../../assets/concept1/logo.png'
 const isOpen = ref(false)
 
 const links = [
-  { label: 'Link 1', href: '#' },
-  { label: 'Link 2', href: '#' },
-  { label: 'Link 3', href: '#' },
-  { label: 'Link 4', href: '#' },
+  { label: 'Réserver une table', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true },
+  { label: 'Menu', href: 'https://www.dropbox.com/scl/fi/79re4tr4ietf92ucw635v/FC-MENU.pdf?rlkey=ufu78k4dil7lr8i1eocpdcqsc&e=1&dl=0', external: true },
+  { label: 'Saké & Vin', href: 'https://www.dropbox.com/scl/fi/dsl0553bgacol1v6u0r43/FC-VIN-SAKE.pdf?rlkey=bx7vivdzle505azpss32od9qo&e=1&dl=0', external: true },
+  { label: 'Boutique', href: 'https://fleurs-et-cadeaux.square.site/', external: true },
 ]
 
 watch(isOpen, (open) => {
@@ -26,7 +26,7 @@ onBeforeUnmount(() => {
   <header class="fixed inset-x-0 top-0 z-50 isolate">
     <div class="relative z-10 mx-auto w-full max-w-[1100px] px-3 pt-3">
       <div class="overflow-hidden rounded-md bg-[#fffdf7] shadow-sm">
-        <div class="flex items-center justify-between px-4 py-3">
+        <div class="flex items-center justify-between px-4 py-1">
           <div class="h-10 w-10 shrink-0">
             <div class="relative h-full w-full overflow-hidden">
               <img :src="logoUrl" alt="Fleurs et Cadeaux" class="absolute left-[-587.72%] top-0 h-full w-[1275.75%] max-w-none" />
@@ -65,7 +65,9 @@ onBeforeUnmount(() => {
               v-for="link in links"
               :key="link.label"
               :href="link.href"
-              class="block rounded-md px-3 py-3 font-inter text-[16px] font-medium tracking-[-0.2px] text-[#ea0050] hover:bg-[#ea0050]/5"
+              :target="link.external ? '_blank' : undefined"
+              :rel="link.external ? 'noopener noreferrer' : undefined"
+              class="block rounded-md px-3 py-3 text-center font-inter text-[16px] font-medium tracking-[-0.2px] text-[#ea0050] hover:bg-[#ea0050]/5"
               @click="isOpen = false"
             >
               {{ link.label }}

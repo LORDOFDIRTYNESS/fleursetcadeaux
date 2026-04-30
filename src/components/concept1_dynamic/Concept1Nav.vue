@@ -8,13 +8,13 @@ const { lang, toggle } = useLanguage()
 
 const links = {
   fr: [
-    { label: 'Réserver une table', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true, mobileOnly: true },
+    { label: 'Réservation', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true, mobileOnly: true },
     { label: 'Menu', href: 'https://www.dropbox.com/scl/fi/79re4tr4ietf92ucw635v/FC-MENU.pdf?rlkey=ufu78k4dil7lr8i1eocpdcqsc&e=1&dl=0', external: true },
     { label: 'Saké & Vin', href: 'https://www.dropbox.com/scl/fi/dsl0553bgacol1v6u0r43/FC-VIN-SAKE.pdf?rlkey=bx7vivdzle505azpss32od9qo&e=1&dl=0', external: true },
     { label: 'Boutique', href: 'https://fleurs-et-cadeaux.square.site/', external: true },
   ],
   en: [
-    { label: 'Book a table', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true, mobileOnly: true },
+    { label: 'Reservation', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true, mobileOnly: true },
     { label: 'Menu', href: 'https://www.dropbox.com/scl/fi/79re4tr4ietf92ucw635v/FC-MENU.pdf?rlkey=ufu78k4dil7lr8i1eocpdcqsc&e=1&dl=0', external: true },
     { label: 'Saké & Wine', href: 'https://www.dropbox.com/scl/fi/dsl0553bgacol1v6u0r43/FC-VIN-SAKE.pdf?rlkey=bx7vivdzle505azpss32od9qo&e=1&dl=0', external: true },
     { label: 'Shop', href: 'https://fleurs-et-cadeaux.square.site/', external: true },

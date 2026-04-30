@@ -18,7 +18,7 @@ const { lang } = useLanguage()
 
 const t = {
   fr: {
-    reserve: 'RÉSERVER UNE TABLE',
+    reserve: 'RÉSERVATION',
     sake: 'SAKÉ & VIN',
     disclaimer: '*Nos menus peuvent varier sans préavis.',
     heading1: 'Nos',
@@ -27,7 +27,7 @@ const t = {
     drink: 'À boire',
   },
   en: {
-    reserve: 'BOOK A TABLE',
+    reserve: 'RESERVATION',
     sake: 'SAKÉ & WINE',
     disclaimer: '*Our menus may change without notice.',
     heading1: 'Our',

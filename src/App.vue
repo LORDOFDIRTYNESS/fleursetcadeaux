@@ -8,8 +8,11 @@ const loading = ref(true)
 onMounted(() => {
   const start = Date.now()
   const minDisplay = 1800
+  let finished = false
 
   const done = () => {
+    if (finished) return
+    finished = true
     const elapsed = Date.now() - start
     const remaining = Math.max(0, minDisplay - elapsed)
     setTimeout(() => { loading.value = false }, remaining + 400)
@@ -20,6 +23,8 @@ onMounted(() => {
   } else {
     window.addEventListener('load', done, { once: true })
   }
+
+  setTimeout(done, minDisplay + 1200)
 })
 </script>
 

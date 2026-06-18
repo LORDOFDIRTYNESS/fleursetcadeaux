@@ -4,7 +4,12 @@ import foodGifUrl from '../../assets/concept1/food-bg.webm'
 import stickerUrl from '../../assets/concept1/sticker.png'
 
 const sectionRef = ref(null)
+const videoRef = ref(null)
 const transform = ref('')
+
+const resumeVideo = () => {
+  videoRef.value?.play().catch(() => {})
+}
 
 const handleScroll = () => {
   if (!sectionRef.value) return
@@ -25,16 +30,18 @@ const handleScroll = () => {
 onMounted(() => {
   handleScroll()
   window.addEventListener('scroll', handleScroll, { passive: true })
+  screen.orientation?.addEventListener('change', resumeVideo)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
+  screen.orientation?.removeEventListener('change', resumeVideo)
 })
 </script>
 
 <template>
   <section ref="sectionRef" class="relative z-10">
-    <video :src="foodGifUrl" class="w-full" autoplay loop muted playsinline />
+    <video ref="videoRef" :src="foodGifUrl" class="w-full min-h-[40vw]" autoplay loop muted playsinline />
 
     <div
       class="absolute top-[-55px] left-0 will-change-transform"

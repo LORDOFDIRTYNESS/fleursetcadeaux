@@ -4,6 +4,7 @@ import HeroSection from './sections/HeroSection.vue'
 import AboutSection from './sections/AboutSection.vue'
 import FoodSection from './sections/FoodSection.vue'
 import MenusSection from './sections/MenusSection.vue'
+import SansSoleilSection from './sections/SansSoleilSection.vue'
 import InfoSection from './sections/InfoSection.vue'
 import BannerSection from './sections/BannerSection.vue'
 import InfolettreSection from './sections/InfolettreSection.vue'
@@ -26,6 +27,7 @@ import FooterSection from './sections/FooterSection.vue'
         <div class="md:flex md:items-stretch">
           <div class="md:w-1/2 md:flex md:flex-col">
             <MenusSection />
+            <SansSoleilSection />
             <div class="md:hidden">
               <BannerSection />
             </div>

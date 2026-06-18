@@ -10,12 +10,12 @@ const t = {
   fr: {
     eyebrow: 'Après Fleurs et Cadeaux',
     body: 'Poursuivez la soirée chez Sans Soleil.',
-    cta: 'Découvrir Sans Soleil',
+    cta: 'Découvrir Bar Sans Soleil',
   },
   en: {
     eyebrow: 'After Fleurs et Cadeaux',
     body: 'Keep the night going at Sans Soleil.',
-    cta: 'Visit Sans Soleil',
+    cta: 'Visit Sans Soleil Bar',
   },
 }
 </script>

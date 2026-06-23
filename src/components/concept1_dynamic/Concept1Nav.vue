@@ -13,6 +13,7 @@ const links = {
     { label: 'Saké & Vin', href: 'https://www.dropbox.com/scl/fi/dsl0553bgacol1v6u0r43/FC-VIN-SAKE.pdf?rlkey=bx7vivdzle505azpss32od9qo&e=1&dl=0', external: true },
     { label: 'Boutique', href: 'https://fleurs-et-cadeaux.square.site/', external: true },
     { label: 'Bar Sans Soleil', href: 'https://www.sanssoleilmtl.com/', external: true },
+    { label: 'Cadence Café', href: 'https://www.instagram.com/cadence.cafe.mtl/', external: true },
   ],
   en: [
     { label: 'Reservation', href: 'https://booking.libroreserve.com/237aca3151e2466/QC016223038468/seat', external: true, mobileOnly: true },
@@ -20,6 +21,7 @@ const links = {
     { label: 'Saké & Wine', href: 'https://www.dropbox.com/scl/fi/dsl0553bgacol1v6u0r43/FC-VIN-SAKE.pdf?rlkey=bx7vivdzle505azpss32od9qo&e=1&dl=0', external: true },
     { label: 'Shop', href: 'https://fleurs-et-cadeaux.square.site/', external: true },
     { label: 'Sans Soleil Bar', href: 'https://www.sanssoleilmtl.com/', external: true },
+    { label: 'Cadence Café', href: 'https://www.instagram.com/cadence.cafe.mtl/', external: true },
   ],
 }
 
